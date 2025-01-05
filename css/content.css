@@ -280,6 +280,16 @@
 
 
 @media (max-width: 1024px) {
+  .mural .text-image h1 {
+    font-size: 30px;
+  }
+  
+  .mural .text-image p {
+    
+    font-size: 18px;
+    
+  }
+  
   .center {
     width: 100vw;
     height: auto;
