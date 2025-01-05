@@ -1,0 +1,336 @@
+:root {
+  --primary-color: #86c231;
+  --primary-light-color: #f7ffec;
+  --font-family-primary: "Poppins";
+  --secondary-color: #d29842;
+  --font-size: 26px;
+}
+.top {
+  margin-top: 10px;
+  max-width: 100%;
+  height: 70vh; /* A altura da tela */
+}
+.mural {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/content-top.jpg"); /* Substitua com sua imagem */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mural .text-image {
+  position: relative;
+  align-items: left;
+  justify-content: end;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100%;
+  color: white;
+  text-align: left;
+  padding-left: 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+
+.mural .text-image h1 {
+  font-size: 60px;
+}
+
+.mural .text-image p {
+  padding-right: 40px;
+  font-size: 20px;
+  text-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  justify-content: space-between;
+}
+.center h1 {
+  font-size: 60px;
+  color: var(--primary-color);
+  font-family: var(--font-family-primary);
+}
+.center p {
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-family: var(--font-family-primary);
+}
+.center .service {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.services-table {
+  width: 40%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: var(--font-family-primary);
+}
+.services-table th:last-child {
+  border-top-right-radius: 20px;
+}
+.services-table th:first-child {
+  border-top-left-radius: 20px;
+}
+.services-table th,
+.services-table td {
+  border: none; /* Usando a cor secundária */
+  padding: 12px;
+  text-align: left;
+  font-size: var(--font-size);
+}
+
+.services-table th {
+  background-color: var(--primary-color); /* Usando a cor primária */
+  color: white;
+}
+
+.services-table td {
+  background-color: var(--primary-light-color); /* Cor de fundo clara */
+  font-size: var(--font-size);
+}
+
+.services-table tr:nth-child(even) td {
+  background-color: #eaf4d9; /* Cor suave para linhas alternadas */
+}
+
+.services-table tr:hover {
+  background-color: var(
+    --secondary-color
+  ); /* Cor secundária ao passar o mouse */
+  color: white; /* Texto branco ao passar o mouse */
+}
+
+.services-table td {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.services-table th,
+.services-table td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.service-description {
+  position: relative;
+  width: 40%;
+  height: auto;
+  background-color: var(--primary-light-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: var(--font-family-primary);
+}
+
+.service-description h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-description p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.service-description ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-description li {
+  background-color: #eaf4d9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--secondary-color);
+  font-size: 1.1rem;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.service-description li strong {
+  color: var(--primary-color);
+}
+
+.service-description li:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Carrousel*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden; /* Esconde a parte do carrossel que sai da área visível */
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave para o slide */
+    height: 100%;
+
+  }
+  
+  .carousel-item {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura da tela */
+    height: 100%;
+    position: relative; /* Necessário para posicionar o texto sobre a imagem */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir toda a área da div */
+  }
+  
+  .carousel-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .carousel-text h2 {
+    font-size: 30px;
+    margin: 0 40px;
+    font-size: 24px;
+  }
+  
+  .carousel-text p {
+    margin: 10px 40px 40px;
+    font-size: 16px;
+
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 9;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .center {
+    width: 100vw;
+    height: auto;
+  }
+  .center .service {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-table th,
+  .services-table td {
+    font-size: 19px;
+  }
+  .services-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: var(--font-family-primary);
+  }
+  .service-description {
+    width: 80%;
+  }
+
+  .center h1 {
+    margin-left: 20px;
+  }
+  .center p {
+    margin-left: 20px;
+    text-wrap: unset;
+ 
+  }
+  .carousel-container {
+    height: 100vh; 
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 620px) {
+  .center h1 {
+    font-size: 40px;
+    margin-left: 10px;
+  }
+  .center p {
+    font-size: 16px;
+    text-align: justify;
+    margin-left: 10px;
+    text-wrap: wrap;
+  }
+}

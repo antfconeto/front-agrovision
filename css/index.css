@@ -1,0 +1,287 @@
+:root {
+    --primary-color: #86c231;
+    --primary-light-color: #f7ffec;
+    --font-family-primary: "Poppins";
+    --secondary-color: #d29842;
+    --font-size: 26px;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Icons style*/
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+/*Body style*/
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-light-color);
+    font-family: var(--font-family-primary);
+    overflow-x: hidden;
+}
+/*header style*/
+.header{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.side-menu{
+    z-index: 10;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-light-color);
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+  }
+.side-menu.active{
+    width: 250px;
+}
+.side-menu .brand{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.side-menu .brand img{
+    width: 60px;
+    height: 60px;
+}
+
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-menu li {
+    padding: 20px;
+    font-size: 18px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .side-menu li:hover {
+    background-color: var(--secondary-color);
+    padding-left: 30px;
+  }
+  
+/*navbar style*/
+.navbar{
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: row;
+    
+}
+
+.navbar .navba-brand-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+
+}
+
+.navbar .navba-brand-container img{
+    width: 100px;
+    height: 100px;
+}
+.navbar .navba-brand-container img:hover{
+    cursor: pointer;
+}
+
+.navbar .navba-brand-container h1{
+    color: var(--primary-color);
+    font-size: var(--font-size);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    transition-delay: 0.2s ;
+}
+.navbar .navba-brand-container h1:hover{
+    cursor: pointer;
+    color:var(--secondary-color)
+    
+}
+.navbar ul{
+    position: relative;
+    display: flex;
+    width:auto;
+    height: 100%;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.toggle-btn{
+    display: none;
+}
+
+.navbar ul li{
+    position: relative;
+    display: flex;
+    width:120px;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:var(--secondary-color);
+    font-size: 20px;
+    padding: 5px;
+}
+.navbar ul li:hover{
+    background-color: var(--primary-color);
+    color: var(--primary-light-color);
+    transition: 0.3s ease, color 0.3s ease;
+}
+.navbar .social-media{
+    position: relative;
+    display: flex;
+    width:auto;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .social-media i{
+    position: relative;
+    font-size: 33px;
+    color:var(--secondary-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navbar .social-media i:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s ease, color 0.3s ease;
+}
+
+/* Telas pequenas (celulares em modo retrato) */
+
+  
+
+  /* Telas grandes (tablets maiores e notebooks pequenos) */
+  @media (max-width: 1024px) {
+    .navbar ul li{
+        font-size: 16px;
+        width: 100px;
+        padding: 0px;
+    }
+    .navbar .navba-brand-container{
+        width: 150px;
+        height: 100%;
+    
+    }
+    .navbar .navba-brand-container h1{
+        font-size: 18px;
+    }
+    .navbar .social-media i{
+        position: relative;
+        font-size: 24px;
+        color:var(--secondary-color);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .navbar .navba-brand-container img{
+        width: 80px;
+        height: 80px;
+    }
+
+  }
+    /* Telas médias (celulares em modo paisagem e tablets) */
+    @media (max-width: 868px) {
+        .navbar ul li{
+            font-size: 14px;
+            width: 80px;
+            padding: 0px;
+        }
+        .navbar .navba-brand-container{
+            width: 150px;
+            height: 100%;
+        
+        }
+        .navbar .navba-brand-container h1{
+            font-size: 14px;
+        }
+        .navbar .social-media i{
+            position: relative;
+            font-size: 20px;
+            color:var(--secondary-color);
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+        .navbar .navba-brand-container img{
+            width: 60px;
+            height: 60px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .navbar{
+            height: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: space-between;
+        }
+        .navbar ul{
+            display: none
+        }
+        .navbar .navba-brand-container{
+            width: 120px;
+            height: 100%;
+        
+        }
+        .toggle-btn {
+            display: flex;
+            background-color: var(--primary-color);
+            color: var(--primary-light-color);
+            border: none;
+            margin-left: 10px;
+            font-size: 24px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .toggle-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--primary-light-color);
+            border-color: var(--secondary-color);
+            transform: scale(1.05);
+          }
+        .navbar .navba-brand-container h1{
+            font-size: 12px;
+        }
+        .navbar .navba-brand-container img{
+            width: 40px;
+            height: 40px;
+        }
+      }
+      
+  

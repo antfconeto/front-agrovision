@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/0e4da6b46f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/content.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Header of site-->
+    <section class="header">
+      <nav class="navbar">
+        <div class="navba-brand-container">
+          <img src="public/logo.svg" alt="Agrovision" />
+          <h1>AGROVISION</h1>
+        </div>
+        <ul>
+          <li>Início</li>
+          <li>Serviços</li>
+          <li>Consultoria</li>
+          <li>Membros</li>
+          <li>Contato</li>
+        </ul>
+        <div class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <button onclick="toggleMenu()" class="toggle-btn" onclick="toggleMenu()">☰</button>
+        </div>
+        
+      </nav>
+
+      <!--Side menu-->
+      <div class="side-menu" id="side-menu">
+        <div class="brand">
+            <img src="public/logo.svg" alt="Agrovision" />
+            <h1>AGROVISION</h1>
+          </div>
+        <ul>
+          <li>Início</li>
+          <li>Serviços</li>
+          <li>Consultoria</li>
+          <li>Membros</li>
+          <li>Contato</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Content of site-->
+    <section class="content">
+        <div class="top">
+            
+            <div class="mural">
+                <div class="text-image">
+                  <h1>Agrovision</h1>
+                  <p>Na Agrovision, transformamos a terra em prosperidade, oferecendo soluções precisas de calagem, adubação e gessagem com monitoria especializada para um crescimento sustentável e eficaz. Cultivando o futuro com responsabilidade!</p>
+                </div>
+              </div>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel">
+              <div class="carousel-item">
+                <img src="./public/1.jpg" alt="Imagem 1">
+                <div class="carousel-text">
+                  <h2>Agrovision: 100 Anos de Excelência e Inovação no Setor Agropecuário</h2>
+                  <p>A Agrovision, com 100 anos de história, tem sido pioneira em soluções de calagem, adubação e gessagem, ajudando milhares de produtores a otimizar suas lavouras com qualidade e sustentabilidade.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./public/2.jpg" alt="Imagem 2">
+                <div class="carousel-text">
+                  <h2>Mais de 200 Fazendas Auxiliadas a Cada Ano</h2>
+                  <p>
+                    A Agrovision tem o orgulho de ser parceira de mais de 200 fazendas todos os anos, fornecendo soluções especializadas em calagem, adubação e gessagem de solos. </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./public/3.jpg" alt="Imagem 3">
+                <div class="carousel-text">
+                  <h2>Serviço de Qualidade</h2>
+                  <p>Na Agrovision, oferecemos serviços de qualidade incomparável, sempre focados em proporcionar soluções eficientes e sustentáveis para o setor agropecuário.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+          </div>
+
+
+        <div class="center">
+            <h1>Serviços Providos</h1>
+            <p>Oferecemos soluções completas para a melhoria e otimização do solo, garantindo maior produtividade e sustentabilidade no seu cultivo. Confira nossos serviços:</p>
+            <div class="service">
+                <div class="service-description">
+                    <ul>
+                      <li><strong>Calagem</strong>: Aplicação de calcário para corrigir a acidez do solo e melhorar a disponibilidade de nutrientes essenciais para o desenvolvimento das plantas.</li>
+                      <li><strong>Adubação</strong>: Aplicação de fertilizantes para garantir que o solo tenha os nutrientes necessários para uma produção agrícola eficiente e de qualidade.</li>
+                      <li><strong>Gessagem</strong>: Uso de gesso agrícola para corrigir deficiências de cálcio e enxofre, além de melhorar a estrutura do solo e a retenção de água.</li>
+                      <li><strong>Monitoria de Solo</strong>: Acompanhamento contínuo das condições do solo para garantir a eficácia das práticas agrícolas e otimizar os resultados ao longo do tempo.</li>
+                    </ul>
+                  </div>
+                <table class="services-table">
+                    <thead>
+                      <tr>
+                        <th>Serviço</th>
+                        <th>Preço</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Calagem</td>
+                        <td>R$ 500,00</td>
+                      </tr>
+                      <tr>
+                        <td>Adubação</td>
+                        <td>R$ 350,00</td>
+                      </tr>
+                      <tr>
+                        <td>Gessagem</td>
+                        <td>R$ 450,00</td>
+                      </tr>
+                      <tr>
+                        <td>Monitoria de Solo</td>
+                        <td>R$ 600,00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Footer of site-->
+    <section class="footer">
+        <footer style="background-color: #2c2c2c; color: #fff; padding: 20px; text-align: center; margin-top: 100px;">
+            <div class="footer-content">
+                <h4>Contatos</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="mailto:contato@agrovision.com.br" style="color: #fff; text-decoration: none;"><i class="fas fa-envelope"></i> contato@agrovision.com.br</a></li>
+                    <li><a href="https://wa.me/5511999999999" style="color: #fff; text-decoration: none;"><i class="fab fa-whatsapp"></i> +55 11 99999-9999</a></li>
+                    <li><a href="https://instagram.com/agrovision" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i> @agrovision</a></li>
+                    <li><a href="https://facebook.com/agrovision" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i> Agrovision</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom" style="margin-top: 20px;">
+                <p>&copy; 2025 Antonio Francisco de Araújo Neto. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+        
+    </section>
+    <script src="https://kit.fontawesome.com/0e4da6b46f.js" crossorigin="anonymous"></script>
+    <script src="./js/toggleMenu.js"></script>
+    <script src="./js/carousel.js"></script>
+  </body>
+</html>
